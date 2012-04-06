@@ -33,7 +33,7 @@ isInfixOf needle haystack = any (isPrefixOf needle) (tails haystack)
 >		bruteforce' m  n []  = Just n
 >		bruteforce' m  n (p:ps)  | n + patternLen > textLen = Nothing
 >		                         | p == hs !! m = bruteforce' (m + 1) n ps
->									| otherwise = bruteforce' (n + 1) (n + 1) ns
+>									                  | otherwise = bruteforce' (n + 1) (n + 1) ns
 
 --------------------------------------------------------------------
 
